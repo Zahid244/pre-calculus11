@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quadratic Functions</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .visual, svg.diagram-svg {
+      display: block;
+      margin: 20px auto;
+      max-width: 500px;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .diagram-title {
+      text-align: center;
+      font-weight: 600;
+      margin-top: 8px;
+      color: #004488;
+    }
+    .callout {
+      background: #eef7ff;
+      border-left: 4px solid #005599;
+      padding: 12px 16px;
+      margin: 20px 0;
+      border-radius: 4px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background: #f0f4fa;
+    }
+    section h2, section h3 {
+      margin-top: 30px;
+    }
+    pre code {
+      background: #eef3f9;
+      padding: 4px 8px;
+      border-radius: 4px;
+      display: block;
+      margin: 10px 0;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Topics</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="quadratic-functions.html">Quadratic Functions</a></li>
+        <li><a href="quadratic-equations.html">Quadratic Equations</a></li>
+        <li><a href="quadratic-graphs.html">Quadratic Graphs</a></li>
+        <li><a href="glossary.html">Glossary</a></li>
+      </ul>
+    </aside>
+    <main class="content">
+      <header>
+        <h1>Quadratic Functions</h1>
+      </header>
+
+      <!-- Starter Intro -->
+      <section>
+        <h2>Introduction</h2>
+        <p>Quadratic functions model real-world curves like the path of a thrown ball or the shape of a satellite dish. They are defined by a squared term and create a U-shaped graph called a parabola. In this lesson, we'll explore each form of quadratic functions with clear visuals and examples.</p>
+      </section>
+
+      <!-- General Quadratic Form -->
+      <section>
+        <h2>1. General Quadratic Form</h2>
+        <p>The most basic form is:</p>
+        <pre><code>f(x) = a x² + b x + c</code></pre>
+        <p>Where:</p>
+        <ul>
+          <li><code>a</code> (≠0) controls width and direction</li>
+          <li><code>b</code> shifts and skews the parabola</li>
+          <li><code>c</code> is the y-intercept at (0, c)</li>
+        </ul>
+        <div class="callout">If <code>a</code> is positive, the parabola opens upward; if negative, downward.</div>
+      </section>
+
+      <!-- Standard Form -->
+      <section>
+        <h2>2. Standard Form</h2>
+        <p>This is the general form itself; it's useful for identifying the y-intercept and for applying the quadratic formula:</p>
+        <pre><code>x = (-b ± √(b² - 4ac)) / (2a)</code></pre>
+        <svg class="diagram-svg" viewBox="0 0 400 300">
+          <line x1="50" y1="250" x2="350" y2="250" stroke="#666" stroke-width="2"/>
+          <line x1="200" y1="50" x2="200" y2="250" stroke="#666" stroke-width="2"/>
+          <path d="M50 250 Q200 100 350 250" fill="none" stroke="#005599" stroke-width="3"/>
+          <text x="60" y="230" fill="#005599" font-size="14">y = a x² + b x + c</text>
+        </svg>
+        <div class="diagram-title">Figure: General/Standard Form Parabola</div>
+      </section>
+
+      <!-- Vertex Form -->
+      <section>
+        <h2>3. Vertex Form</h2>
+        <p>Vertex form highlights the turning point:</p>
+        <pre><code>f(x) = a (x - h)² + k</code></pre>
+        <ol>
+          <li>Complete the square on <code>a x² + b x</code>.</li>
+          <li>Rewrite to find <code>h</code> and <code>k</code>.</li>
+        </ol>
+        <svg class="diagram-svg" viewBox="0 0 400 300">
+          <line x1="50" y1="250" x2="350" y2="250" stroke="#666" stroke-width="2"/>
+          <line x1="200" y1="50" x2="200" y2="250" stroke="#666" stroke-width="2"/>
+          <path d="M50 250 Q200 80 350 250" fill="none" stroke="#2a9d8f" stroke-width="3"/>
+          <circle cx="200" cy="80" r="5" fill="#e76f51"/>
+          <text x="210" y="75" fill="#e76f51" font-size="12">(h,k)</text>
+        </svg>
+        <div class="diagram-title">Figure: Vertex Form Parabola</div>
+      </section>
+
+      <!-- Factored Form -->
+      <section>
+        <h2>4. Factored Form</h2>
+        <p>Factored form reveals the roots (x-intercepts):</p>
+        <pre><code>f(x) = a (x - r₁) (x - r₂)</code></pre>
+        <ol>
+          <li>Find r₁ and r₂ by solving <code>f(x)=0</code>.</li>
+          <li>Rewrite the expression.</li>
+        </ol>
+        <svg class="diagram-svg" viewBox="0 0 400 300">
+          <line x1="50" y1="250" x2="350" y2="250" stroke="#666" stroke-width="2"/>
+          <path d="M50 250 Q200 150 350 250" fill="none" stroke="#e76f51" stroke-width="3"/>
+          <circle cx="150" cy="250" r="5" fill="#264653"/>
+          <text x="155" y="265" fill="#264653" font-size="12">r₁</text>
+          <circle cx="250" cy="250" r="5" fill="#264653"/>
+          <text x="255" y="265" fill="#264653" font-size="12">r₂</text>
+        </svg>
+        <div class="diagram-title">Figure: Factored Form Parabola</div>
+      </section>
+
+      <!-- Practice -->
+      <section>
+        <h2>Practice Questions</h2>
+        <ol>
+          <li>Convert <code>f(x)=x²+4x+3</code> into all forms.</li>
+          <li>Identify vertex and roots for <code>f(x)=2x²-8x+6</code>.</li>
+          <li>Use the quadratic formula on <code>f(x)=3x²+6x-9</code>.</li>
+        </ol>
+        <p><strong>Answers:</strong> Check your calculations using each form!</p>
+      </section>
+
+      <footer>
+        <p>&copy; 2025 Zahid Khamoosh | Pre-Calculus 11 Project</p>
+        <p>
+          <a href="index.html">Home</a> |
+          <a href="quadratic-functions.html">Functions</a> |
+          <a href="quadratic-equations.html">Equations</a> |
+          <a href="quadratic-graphs.html">Graphs</a> |
+          <a href="glossary.html">Glossary</a>
+        </p>
+      </footer>
+    </main>
+  </div>
+
+  <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" 
+  style="position:fixed;bottom:30px;right:30px;padding:10px 16px;
+  background:#004488;color:#fff;border:none;border-radius:6px;
+  cursor:pointer;z-index:1000;box-shadow:0 4px 8px rgba(0,0,0,0.2);">
+  ↑ Top
+</button>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quadratic Equations</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .callout {
+      background: #fff9e6;
+      border-left: 4px solid #f4a261;
+      padding: 12px 16px;
+      margin: 20px 0;
+      border-radius: 4px;
+    }
+    pre code {
+      background: #eef3f9;
+      padding: 4px 8px;
+      border-radius: 4px;
+      display: block;
+      margin: 10px 0;
+      font-family: monospace;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background: #f0f4fa;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Topics</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="quadratic-functions.html">Quadratic Functions</a></li>
+        <li><strong><a href="quadratic-equations.html">Quadratic Equations</a></strong></li>
+        <li><a href="quadratic-graphs.html">Quadratic Graphs</a></li>
+        <li><a href="glossary.html">Glossary</a></li>
+      </ul>
+    </aside>
+
+    <main class="content">
+      <header>
+        <h1>Quadratic Equations</h1>
+      </header>
+
+      <section>
+        <h2>Introduction</h2>
+        <p>Quadratic equations appear when modeling phenomena like projectile motion, area optimization, and physics problems. Unlike linear equations, they include an <code>x²</code> term, creating two solutions in most cases. In this lesson, we'll explore three main solving methods with clear steps and examples.</p>
+      </section>
+
+      <section>
+        <h2>1. General Form &amp; Discriminant</h2>
+        <p>The standard form of a quadratic equation is:</p>
+        <pre><code>ax² + bx + c = 0</code></pre>
+        <p>The <strong>discriminant</strong> <code>D = b² - 4ac</code> tells us how many real solutions exist:</p>
+        <table>
+          <thead>
+            <tr><th>Discriminant (D)</th><th>Solutions</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><code>D &gt; 0</code></td><td>Two distinct real roots</td></tr>
+            <tr><td><code>D = 0</code></td><td>One real (repeated) root</td></tr>
+            <tr><td><code>D &lt; 0</code></td><td>No real roots (complex)</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>2. Solving by Factoring</h2>
+        <p>Factoring is often the quickest method when the quadratic splits cleanly into two binomials. Follow these clear steps:</p>
+        <ol>
+          <li><strong>Standard form:</strong> Write the equation as <code>ax² + bx + c = 0</code>.</li>
+          <li><strong>Identify coefficients:</strong> Determine <code>a</code>, <code>b</code>, and <code>c</code>.</li>
+          <li><strong>Find m and n:</strong> Find two numbers <code>m</code> and <code>n</code> so that <code>m·n = a·c</code> and <code>m + n = b</code>.</li>
+          <li><strong>Split the middle term:</strong> Rewrite <code>bx</code> as <code>m x + n x</code>, giving four terms.</li>
+          <li><strong>Factor by grouping:</strong> Pair terms and factor each group, then factor out the common binomial.</li>
+          <li><strong>Solve for x:</strong> Set each factor equal to zero and solve.</li>
+        </ol>
+        <p><strong>Example:</strong> Solve <code>x² - 5x + 6 = 0</code></p>
+        <ol>
+          <li><strong>Identify:</strong> <code>a=1</code>, <code>b=-5</code>, <code>c=6</code>.</li>
+          <li><strong>Find m, n:</strong> <code>a·c = 6</code>, <code>b = -5</code>. Numbers: <code>m = -2</code>, <code>n = -3</code> (since <code>-2 + -3 = -5</code> and <code>-2 · -3 = 6</code>).</li>
+          <li><strong>Split:</strong> <pre><code>x² - 2x - 3x + 6 = 0</code></pre></li>
+          <li><strong>Group:</strong> <pre><code>x(x - 2) - 3(x - 2) = 0</code></pre></li>
+          <li><strong>Factor:</strong> <pre><code>(x - 2)(x - 3) = 0</code></pre></li>
+          <li><strong>Solve:</strong> <pre><code>x - 2 = 0  ⇒  x = 2
+x - 3 = 0  ⇒  x = 3</code></pre></li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>3. Quadratic Formula</h2>
+        <p>Use when factoring is difficult or impossible:</p>
+        <div class="callout">
+          <strong>Formula:</strong> <code>x = [-b ± √(b² - 4ac)] / (2a)</code>
+        </div>
+        <p><strong>Example:</strong> Solve <code>2x² + 3x - 2 = 0</code></p>
+        <ol>
+          <li>Identify <code>a=2, b=3, c=-2</code>.</li>
+          <li>Compute discriminant: <code>D = 3² - 4·2·(-2) = 9 + 16 = 25</code>.</li>
+          <li>Plug into formula:<br>
+            <code>x = [-3 ± √25] / 4 = [-3 ± 5] / 4</code>
+          </li>
+          <li>Solve: <code>x = (2/4) = 0.5</code> or <code>x = (-8/4) = -2</code>.</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>4. Completing the Square</h2>
+        <p>Transforms the equation into a perfect square trinomial:</p>
+        <ol>
+          <li>Move <code>c</code> to right: <code>ax² + bx = -c</code>.</li>
+          <li>Divide by <code>a</code> (if ≠1).</li>
+          <li>Add <code>(b/(2a))²</code> to both sides.</li>
+          <li>Write left as <code>(x + b/(2a))²</code>, solve by taking square root.</li>
+        </ol>
+        <p><strong>Example:</strong> Solve <code>x² + 6x = 7</code></p>
+        <pre><code>x² + 6x + 9 = 7 + 9
+(x + 3)² = 16
+x + 3 = ±4  ⇒  x = 1 or x = -7</code></pre>
+      </section>
+
+      <section>
+        <h2>5. Special Cases &amp; Tips</h2>
+        <ul>
+          <li><strong>Perfect Square:</strong> <code>x² + 4x + 4 = (x + 2)²</code>.</li>
+          <li><strong>Difference of Squares:</strong> <code>x² - 9 = (x - 3)(x + 3)</code>.</li>
+          <li>Always simplify radicals if possible.</li>
+          <li>Check your solutions by plugging back into original equation.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>6. Practice Problems</h2>
+        <ol>
+          <li>Factor and solve: <code>x² - 7x + 10 = 0</code>.</li>
+          <li>Use formula: <code>3x² - 2x - 1 = 0</code>.</li>
+          <li>Complete the square: <code>x² + 4x - 5 = 0</code>.</li>
+        </ol>
+        <p><strong>Answers:</strong> (1) x=2,5; (2) x=1 or x=-1/3; (3) x=1 or x=-5.</p>
+      </section>
+
+      <footer>
+        <p>&copy; 2025 Zahid Khamoosh | Pre-Calculus 11 Project</p>
+        <p>
+          <a href="index.html">Home</a> |
+          <a href="quadratic-functions.html">Functions</a> |
+          <a href="quadratic-equations.html">Equations</a> |
+          <a href="quadratic-graphs.html">Graphs</a> |
+          <a href="glossary.html">Glossary</a>
+        </p>
+      </footer>
+    </main>
+  </div>
+  <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" 
+  style="position:fixed;bottom:30px;right:30px;padding:10px 16px;
+  background:#004488;color:#fff;border:none;border-radius:6px;
+  cursor:pointer;z-index:1000;box-shadow:0 4px 8px rgba(0,0,0,0.2);">
+  ↑ Top
+</button>
+</body>
+</html>

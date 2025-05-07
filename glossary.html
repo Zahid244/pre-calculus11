@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glossary of Terms</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .term {
+      margin-bottom: 24px;
+    }
+    .term h3 {
+      color: #003366;
+      margin-bottom: 6px;
+    }
+    .term p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .glossary-header {
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Topics</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="quadratic-functions.html">Quadratic Functions</a></li>
+        <li><a href="quadratic-equations.html">Quadratic Equations</a></li>
+        <li><a href="quadratic-graphs.html">Quadratic Graphs</a></li>
+        <li><strong><a href="glossary.html">Glossary</a></strong></li>
+      </ul>
+    </aside>
+
+    <main class="content">
+      <header class="glossary-header">
+        <h1>Glossary of Key Terms</h1>
+        <p>This page defines important concepts from Pre-Calculus 11 related to quadratic functions and equations.</p>
+      </header>
+
+      <section class="term">
+        <h3>Axis of Symmetry</h3>
+        <p>A vertical line that divides a parabola into two mirror images. For a quadratic in vertex form <code>y = a(x - h)² + k</code>, the axis of symmetry is <code>x = h</code>.</p>
+      </section>
+
+      <section class="term">
+        <h3>Discriminant</h3>
+        <p>The expression <code>b² - 4ac</code> in the quadratic formula. It tells us how many real roots the equation has:</p>
+        <ul>
+          <li>If D > 0: two real roots</li>
+          <li>If D = 0: one real root</li>
+          <li>If D < 0: no real roots</li>
+        </ul>
+      </section>
+
+      <section class="term">
+        <h3>Factored Form</h3>
+        <p>A quadratic written as <code>y = a(x - r₁)(x - r₂)</code>, where <code>r₁</code> and <code>r₂</code> are the x-intercepts of the parabola.</p>
+      </section>
+
+      <section class="term">
+        <h3>Parabola</h3>
+        <p>The U-shaped graph formed by a quadratic function. It can open upwards or downwards depending on the sign of <code>a</code>.</p>
+      </section>
+
+      <section class="term">
+        <h3>Quadratic Equation</h3>
+        <p>An equation of the form <code>ax² + bx + c = 0</code> where <code>a ≠ 0</code>. It can be solved by factoring, completing the square, or using the quadratic formula.</p>
+      </section>
+
+      <section class="term">
+        <h3>Quadratic Function</h3>
+        <p>A function that can be written in the form <code>f(x) = ax² + bx + c</code>. Its graph is a parabola.</p>
+      </section>
+
+      <section class="term">
+        <h3>Roots</h3>
+        <p>The solutions to a quadratic equation. Also known as x-intercepts or zeros.</p>
+      </section>
+
+      <section class="term">
+        <h3>Standard Form</h3>
+        <p>The common way to write a quadratic: <code>y = ax² + bx + c</code>.</p>
+      </section>
+
+      <section class="term">
+        <h3>Vertex</h3>
+        <p>The highest or lowest point on the parabola. In vertex form <code>y = a(x - h)² + k</code>, the vertex is <code>(h, k)</code>.</p>
+      </section>
+
+      <footer>
+        <p>&copy; 2025 Zahid Khamoosh | Pre-Calculus 11 Project</p>
+        <p>
+            <a href="index.html">Home</a> |
+            <a href="quadratic-functions.html">Functions</a> |
+            <a href="quadratic-equations.html">Equations</a> |
+            <a href="quadratic-graphs.html">Graphs</a> |
+            <a href="glossary.html">Glossary</a>
+          </p>
+      </footer>
+    </main>
+  </div>
+  <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" 
+  style="position:fixed;bottom:30px;right:30px;padding:10px 16px;
+  background:#004488;color:#fff;border:none;border-radius:6px;
+  cursor:pointer;z-index:1000;box-shadow:0 4px 8px rgba(0,0,0,0.2);">
+  ↑ Top
+</button>
+</body>
+</html>
